@@ -35,11 +35,19 @@ function correctGuess() {
     }
     document.querySelector(".number").textContent = number;
     document.body.style.background = "green";
-    document.querySelector(".check").textContent = "Restart"
+    document.querySelector(".check").textContent = "Restart";
+}
+
+function lostGame() {
+    message = "🤮 You lost the game";
+    document.querySelector(".check").textContent = "Restart";
 }
 
 function incorrectGuess(guess, number) {
-    if (Math.abs(guess - number) <= 3) {
+    if (score == 0) {
+        lostGame();
+    }
+    else if (Math.abs(guess - number) <= 3) {
         message = "😮 Too close"
     }
     else if (guess - number < 0) {
@@ -69,7 +77,9 @@ document.querySelector(".check").addEventListener("click", function () {
 
     const guess = Number(document.querySelector(".guess").value);
     if (guess === 0) {
-        message = "🤬 Abe sathiya gai ho kya..."
+        message = "🤬 Abe sathiya gai ho kya...";
+        score--;
+        if (score == 0) lostGame();
     }
     else if (guess === number) {
         correctGuess();
