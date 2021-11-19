@@ -40,12 +40,12 @@ function correctGuess() {
 
 function incorrectGuess(guess, number) {
     if (Math.abs(guess - number) <= 3) {
-        message = "Too close 😮"
+        message = "😮 Too close"
     }
     else if (guess - number < 0) {
-        message = "Too less 🙄";
+        message = "🙄 Too less";
     } else {
-        message = "Too high 😑";
+        message = "😑 Too high";
     }
     score--;
 }
@@ -68,8 +68,10 @@ document.querySelector(".check").addEventListener("click", function () {
     }
 
     const guess = Number(document.querySelector(".guess").value);
-
-    if (guess === number) {
+    if (guess === 0) {
+        message = "🤬 Abe sathiya gai ho kya..."
+    }
+    else if (guess === number) {
         correctGuess();
     }
     else {
