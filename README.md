@@ -15,4 +15,4 @@ https://gmn.naveen-kumar.in/
 <br>
 <br>
 
-> Note: Iss project is istemaal kiya gaya HTML aur CSS ka code uthaya hua hai.
+> Note: Iss project is istemaal kiya gaya HTML aur CSS ka code uthaya hua hai. (Haddi chamdi dusro ki par dimag humara 😉)
