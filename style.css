@@ -34,14 +34,14 @@ main {
 }
 
 .left {
-  width: 52rem;
+  width: 60rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .right {
-  width: 52rem;
+  width: 60rem;
   font-size: 2rem;
 }
 
