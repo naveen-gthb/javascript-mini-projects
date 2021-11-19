@@ -1,6 +1,6 @@
 # JavaScript Mini Projects
 
-This repository contains different branches and each branch contains a completely different project.
+This repository has multiple branches, each with its own project.
 
 List of project:
 Sr. No.|Project Name| Branch Name| Try It Now|
