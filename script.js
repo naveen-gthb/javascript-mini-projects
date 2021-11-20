@@ -26,7 +26,6 @@
 
 // NOTE: Game Logic
 
-
 function correctGuess() {
     message = "Correct number 🎉";
     if (highScore < score) {
