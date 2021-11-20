@@ -23,10 +23,9 @@
 //     console.log(document.querySelector(".guess").value);
 // })
 
-function reset() {
-    localStorage.removeItem("highScore");
-    location.reload()
-}
+
+// NOTE: Game Logic
+
 
 function correctGuess() {
     message = "Correct number 🎉";
@@ -92,7 +91,41 @@ document.querySelector(".check").addEventListener("click", function () {
     document.querySelector(".score").textContent = score;
 })
 
+// NOTE: Reset logic
+
+function reset() {
+    localStorage.removeItem("highScore");
+    location.reload()
+}
+
 document.querySelector(".reset").addEventListener("click", function () {
     reset();
 })
 
+// NOTE: Instruction modal window logic
+
+const modal = document.querySelector(".modal");
+const overlay = document.querySelector(".overlay");
+
+document.querySelector(".instructions").addEventListener("click", function () {
+    modal.classList.remove("hidden");
+    overlay.classList.remove("hidden");
+})
+
+function removeModal() {
+    modal.classList.add("hidden");
+    overlay.classList.add("hidden");
+}
+document.querySelector(".close-modal").addEventListener("click", function () {
+    removeModal();
+})
+
+overlay.addEventListener("click", function () {
+    removeModal();
+})
+
+document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+        removeModal();
+    }
+});
