@@ -12,8 +12,9 @@
 <body>
   <header>
     <h1>Guess My Number!</h1>
-    <p class="between">(Between 1 and 20)</p>
     <button class="btn reset">Reset Game!</button>
+    <button class="btn instructions">Instructions</button>
+    <p class="between">&lt;Between 1 to 20&gt;</p>
     <div class="number">?</div>
   </header>
   <main>
@@ -29,6 +30,22 @@
       </p>
     </section>
   </main>
+
+  <div class="modal hidden">
+    <button class="close-modal">&times;</button>
+    <p>
+    <h2>📜 Instructions</h2>
+    <br>
+    <ul>
+      <li>A number between 1 and 20 will be generated at random.</li>
+      <li>Try to guess the number in the least attempt possible in order to get a high score.</li>
+      <li>Your score will be reduced by one point for each wrong guess.</li>
+      <li>To reset your high score to 0, click 'Reset Game!</li>
+    </ul>
+    </p>
+  </div>
+  <div class="overlay hidden"></div>
+
   <script src="script.js"></script>
 </body>
 
